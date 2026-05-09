@@ -305,28 +305,28 @@ static void	test_strtrim(void)
 	free(s);
 }
 
-// static void	test_split(void)
-// {
-// 	char	**arr;
+static void	test_split(void)
+{
+	char	**arr;
 
-// 	print_header("ft_split");
-// 	arr = ft_split("hello world 42", ' ');
-// 	print_test("ft_split returns non-NULL", arr != NULL);
-// 	print_test("ft_split [0] == \"hello\"", arr && strcmp(arr[0], "hello") == 0);
-// 	print_test("ft_split [1] == \"world\"", arr && strcmp(arr[1], "world") == 0);
-// 	print_test("ft_split [2] == \"42\"",    arr && strcmp(arr[2], "42") == 0);
-// 	print_test("ft_split [3] == NULL",      arr && arr[3] == NULL);
-// 	if (arr)
-// 	{
-// 		int	i = 0;
-// 		while (arr[i])
-// 			free(arr[i++]);
-// 		free(arr);
-// 	}
-// 	arr = ft_split("", ' ');
-// 	print_test("ft_split empty string gives [NULL]", arr && arr[0] == NULL);
-// 	free(arr);
-// }
+	print_header("ft_split");
+	arr = ft_split("hello world 42", ' ');
+	print_test("ft_split returns non-NULL", arr != NULL);
+	print_test("ft_split [0] == \"hello\"", arr && strcmp(arr[0], "hello") == 0);
+	print_test("ft_split [1] == \"world\"", arr && strcmp(arr[1], "world") == 0);
+	print_test("ft_split [2] == \"42\"",    arr && strcmp(arr[2], "42") == 0);
+	print_test("ft_split [3] == NULL",      arr && arr[3] == NULL);
+	if (arr)
+	{
+		int	i = 0;
+		while (arr[i])
+			free(arr[i++]);
+		free(arr);
+	}
+	arr = ft_split("", ' ');
+	print_test("ft_split empty string gives [NULL]", arr && arr[0] == NULL);
+	free(arr);
+}
 
 static void	test_itoa(void)
 {
@@ -659,7 +659,7 @@ int	main(void)
 	test_substr();
 	test_strjoin();
 	test_strtrim();
-	// test_split();
+	test_split();
 	test_itoa();
 	test_strmapi();
 	test_striteri();
