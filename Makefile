@@ -6,11 +6,10 @@
 #    By: gfranca <gfranca@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/24 23:13:36 by gfranca           #+#    #+#              #
-#    Updated: 2026/05/09 16:49:36 by gfranca          ###   ########.fr        #
+#    Updated: 2026/05/13 23:05:48 by gfranca          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TEST= main.c
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
@@ -30,7 +29,6 @@ AR = ar rcs
 
 all: $(NAME)
 
-bonus: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 %.o: %.c
@@ -44,6 +42,4 @@ fclean: clean
 
 re: fclean all
 
-ttest:
-	$(CC) $(CFLAGS) $(TEST) libft.a;./a.out | cat -e;rm -f a.out
 .PHONY: all clean fclean re
